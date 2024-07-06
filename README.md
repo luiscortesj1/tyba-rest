@@ -32,3 +32,18 @@ cd tyba-rest
 GOOGLE_API_KEY=your_google_api_key
 JWT_SECRET=your_jwt_secret
 MONGO_URI=mongodb://mongo:27017/databaseName
+
+### 2. Instalar Dependencias
+npm install
+
+### 4. Ejecutar Pruebas
+
+Para asegurarte de que todo esté configurado correctamente, ejecuta las pruebas:
+npm test
+
+## Docker
+
+### 1. Construir la Imagen de Docker
+
+Para construir la imagen de Docker, ejecuta el siguiente comando:
+docker-compose up --build
