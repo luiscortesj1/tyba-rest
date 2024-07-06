@@ -1,3 +1,11 @@
+/**
+ * Este archivo, authController.js, contiene el controlador de autenticación para una aplicación Node.js.
+ * Incluye tres funciones principales:
+ * 1. register: Maneja el registro de usuarios al encriptar la contraseña y guardar el usuario en la base de datos.
+ * 2. login: Maneja el inicio de sesión del usuario al verificar el correo electrónico y la contraseña, luego genera un token JWT.
+ * 3. logout: Maneja el cierre de sesión del usuario asumiendo que el cliente eliminará el token JWT.
+ */
+
 const User = require("../models/User");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
@@ -32,8 +40,8 @@ const login = async (req, res) => {
 
 const logout = async (req, res) => {
   try {
-    const userId = req.user._id;
-    await new Transaction({ userId, action: "logout" }).save();
+    // en un sistema basado en JWT, no se hace nada en el servidor.
+    // Se asume que el cliente (Fron-end) eliminará el token JWT.
     res.json({ message: "User logged out" });
   } catch (error) {
     res.status(500).json({ error: "Error logging out" });

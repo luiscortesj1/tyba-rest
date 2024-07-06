@@ -1,7 +1,14 @@
+/**
+ * Esta función middleware se utiliza para autenticar tokens JWT (JSON Web Tokens) en las solicitudes HTTP entrantes.
+ * Extrae el token del encabezado "Authorization", lo verifica usando una clave secreta y adjunta
+ * el ID de usuario decodificado al objeto de la solicitud si el token es válido. Si el token falta o es inválido,
+ * responde con un mensaje de error apropiado.
+ */
+
 const jwt = require("jsonwebtoken");
 
 const authMiddleware = (req, res, next) => {
-  const token = req.headers["authorization"];
+  const token = req.headers["authorization"].replace("Bearer ", "");
   if (!token) {
     return res.status(403).json({ message: "No token provided" });
   }

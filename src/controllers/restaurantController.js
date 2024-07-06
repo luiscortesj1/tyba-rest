@@ -1,3 +1,12 @@
+/**
+ * Este módulo define un controlador para obtener restaurantes cercanos basados en el nombre de una ciudad o coordenadas.
+ * Utiliza la API de Geocodificación de Google para convertir el nombre de la ciudad en coordenadas si es necesario, 
+ * y la API de Lugares de Google para encontrar restaurantes cercanos. Los resultados se devuelven al cliente, 
+ * y se guarda un registro de la transacción en la base de datos. La transacción incluye el ID del usuario, 
+ * el número de resultados encontrados y la ubicación utilizada para la búsqueda.
+ * Para @param city : Nombre la ciudad y mejor si esta la ubicación completa;  Maicao, La Guajira
+ * Para @param coordinates : Cordenadas en Grados decimales (DD) ; 41.40338, 2.17403
+ */
 const axios = require("axios");
 const Transaction = require("../models/Transaction");
 
