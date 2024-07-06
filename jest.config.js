@@ -9,4 +9,5 @@ module.exports = {
     "!src/**/*.test.js",
   ],
   coverageReporters: ["text", "text-summary"],
+  setupFilesAfterEnv: ["./jest.setup.js"],
 };

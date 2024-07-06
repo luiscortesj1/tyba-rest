@@ -83,7 +83,9 @@ describe("authMiddleware", () => {
     authMiddleware(req, res, next);
 
     expect(res.status).toHaveBeenCalledWith(401);
-    expect(res.json).toHaveBeenCalledWith({ message: "Failed to authenticate token" });
+    expect(res.json).toHaveBeenCalledWith({
+      message: "Failed to authenticate token",
+    });
     expect(next).not.toHaveBeenCalled();
   });
 });
