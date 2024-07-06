@@ -30,9 +30,14 @@ const login = async (req, res) => {
   }
 };
 
-const logout = (req, res) => {
-  // Implementar funcionalidad de logout si es necesario (opcional)
-  res.status(200).json({ message: "User logged out successfully" });
+const logout = async (req, res) => {
+  try {
+    const userId = req.user._id;
+    await new Transaction({ userId, action: "logout" }).save();
+    res.json({ message: "User logged out" });
+  } catch (error) {
+    res.status(500).json({ error: "Error logging out" });
+  }
 };
 
 module.exports = { register, login, logout };
