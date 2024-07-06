@@ -13,9 +13,9 @@ services:
     ports:
       - '3000:3000'
     environment:
-      - MONGO_URI=mongodb://mongo:27017/test
-      - JWT_SECRET=your_jwt_secret
-      - GOOGLE_API_KEY=AIzaSyB5VfziwoE_x_RWXwp9L8PYXmRZJkZz7Zk
+      - MONGO_URI=${MONGO_URI}
+      - JWT_SECRET=${JWT_SECRET}
+      - GOOGLE_API_KEY=${GOOGLE_API_KEY}
     depends_on:
       - mongo
 

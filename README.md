@@ -1,6 +1,7 @@
 # API REST Backend Test
 
 ## Descripción
+
 Esta es una API REST desarrollada como prueba técnica para el equipo de backend. La API incluye las siguientes funcionalidades:
 
 - Registro de usuario
@@ -9,7 +10,11 @@ Esta es una API REST desarrollada como prueba técnica para el equipo de backend
 - Crear un endpoint para consultar la lista de transacciones realizadas históricamente.
 - Logout de usuario
 
+- [Docker](https://www.docker.com/get-started)
+- [Docker Compose](https://docs.docker.com/compose/install/)
+
 ## Tecnologías
+
 - Node.js
 - Express
 - MongoDB
@@ -17,3 +22,13 @@ Esta es una API REST desarrollada como prueba técnica para el equipo de backend
 - Docker y Docker Compose
 
 ## Instalación y Ejecución
+1. Clona este repositorio:
+
+```bash
+git clone https://github.com/luiscortesj1/tyba-rest.git
+cd tyba-rest
+
+2. Crea un archivo .env en el directorio raíz del proyecto y agrega las siguientes variables de entorno:
+GOOGLE_API_KEY=your_google_api_key
+JWT_SECRET=your_jwt_secret
+MONGO_URI=mongodb://mongo:27017/databaseName
