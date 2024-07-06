@@ -27,7 +27,7 @@ describe("Auth Controller", () => {
         .send({
           username: "testuser",
           email: "test@example.com",
-          password: "password123",
+          password: "password12.#3",
         });
 
       expect(res.status).toBe(201);
@@ -43,7 +43,7 @@ describe("Auth Controller", () => {
         .send({
           username: "testuser",
           email: "test@example.com",
-          password: "password123",
+          password: "password123.,2#",
         });
 
       expect(res.status).toBe(400);
