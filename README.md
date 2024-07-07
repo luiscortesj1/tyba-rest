@@ -47,3 +47,5 @@ npm test
 
 Para construir la imagen de Docker, ejecuta el siguiente comando:
 docker-compose up --build
+
+En la carpeta  postman esta una colección con los enpoint, seria solo impotarlo. 
